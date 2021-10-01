@@ -305,7 +305,8 @@ def train(conf, loader, generator, discriminator, g_optim, d_optim, g_ema, devic
                         normalize=True,
                         value_range=(-1, 1),
                     )
-                    sample = None # cleanup memory
+                    sample = None 
+                    # cleanup memory
 
             if i % 10000 == 0:
                 torch.save(
